@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+body {
+    background-image: url("hero-bg.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    backdrop-filter: blur(5px);
+    color: aliceblue;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#password {
+    color: greenyellow;
+}
+
+#pw-btn {
+    background-color: greenyellow;
+    color: black;
+    padding: 0.75rem 1.25rem;
+    border-radius: 2rem;
+    transition: 0.2s ease-in;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+#pw-btn:hover {
+    background-color: initial;
+    border: 1px solid greenyellow;
+    color: greenyellow;
+}
+
+.pw-cont {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#copytooltip {
+    position: absolute;
+    left: 50%;
+    top: -2.5rem;
+    transform: translateX(-50%);
+    background-color: black;
+    color: greenyellow;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+}
+
+#copytooltip::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 8px solid;
+    border-color: #000 #0000 #0000 #0000;
+}
+
+.pw-cont:hover #copytooltip,
+#password:hover+#copytooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 12rem;
+}
+
+.row::checkmark {
+    color: green;
+    background-color: green;
+}
+
+#rangeVal {
+    -webkit-appearance: none;
+    border-radius: 2rem;
+    width: 12rem;
+    background-color: #aaa;
+    outline: none;
+    overflow: hidden;
+}
+#rangeVal::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background: greenyellow;
+    border-radius: 2rem;
+    box-shadow: -350px 0px 0px 340px greenyellow;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    accent-color: greenyellow;
+    width: 1.33rem;
+    padding: 0.33rem;
+    color: #aaa;
+}
+#filter-toggle ~ .filters {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+#filter-toggle:checked ~ .filters {
+    max-height: 12rem; 
+    transition: max-height 0.5s ease;
+}

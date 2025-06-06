@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Random Password Generator</h1>
+        <div class="pw-cont">
+            <span id="copytooltip">Copy!</span>
+            <h1 id="password">Click Generate</h1>
+        </div>
+        <div id="pw-btn">
+            <h3>Generate</h3>
+        </div>
+        <input type="checkbox" id="filter-toggle" style="display: none;">
+        <label for="filter-toggle" style="cursor: pointer; font-weight: bold;">Adjust</label>
+        <div class="filters">
+            <input type="range" min="8" max="16" value="8" id="rangeVal">
+            <div class="row">
+                <span>Password Length</span>
+                <span id="rangeSlide">8</span>
+            </div>
+            <div class="row">
+                <label for="lwc">Lowercase</label>
+                <input type="checkbox" id="lwc" name="lwc" checked>
+            </div>
+            <div class="row">
+                <label for="upc">Uppercase</label>
+                <input type="checkbox" id="upc" name="upc" checked>
+            </div>
+            <div class="row">
+                <label for="num">Numbers</label>
+                <input type="checkbox" id="num" name="num" checked>
+            </div>
+            <div class="row">
+                <label for="sym">Symbols</label>
+                <input type="checkbox" id="sym" name="sym" checked>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
